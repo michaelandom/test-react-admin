@@ -20,13 +20,13 @@ const UserTitle = () => {
 };
 const userFilters = [
   <TextInput source="q" label="Search" alwaysOn />,
-  <ReferenceInput source="id" label="User">
+  <ReferenceInput source="id" label="user" reference="users">
     <SelectInput optionText="name" />
   </ReferenceInput>,
 ];
 export const UserList = () => (
-  <List filter={userFilters}>
-    <Datagrid rowClick="edit">
+  <List filters={userFilters}>
+    <Datagrid>
       <TextField source="id" />
       <TextField source="name" />
       <TextField source="username" />
@@ -56,8 +56,8 @@ export const UserEdit = () => (
   </Edit>
 );
 export const UserCreate = (props) => (
-    <Create {...props}>
-      <SimpleForm>
+  <Create {...props}>
+    <SimpleForm>
       <TextInput disabled source="id" />
       <TextInput source="name" />
       <TextInput source="username" />
@@ -67,7 +67,6 @@ export const UserCreate = (props) => (
       {/* <TextField source="website" /> */}
       <TextInput source="website" />
       <TextInput source="company.name" />
-      </SimpleForm>
-    </Create>
-  );
-  
+    </SimpleForm>
+  </Create>
+);
