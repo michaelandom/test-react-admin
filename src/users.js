@@ -16,7 +16,7 @@ import {
 } from "react-admin";
 const UserTitle = () => {
   const record = useRecordContext();
-  return <span>Post {record ? `"${record.name}"` : ""}</span>;
+  return <span>User {record ? `"${record.name}"` : ""}</span>;
 };
 const userFilters = [
   <TextInput source="q" label="Search" alwaysOn />,
@@ -25,8 +25,10 @@ const userFilters = [
   </ReferenceInput>,
 ];
 export const UserList = () => (
-  <List filters={userFilters}>
-    <Datagrid>
+  <List filters={userFilters} 
+  
+  >
+    <Datagrid >
       <TextField source="id" />
       <TextField source="name" />
       <TextField source="username" />
