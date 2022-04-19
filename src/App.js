@@ -5,6 +5,7 @@ import jsonServerProvider from "ra-data-json-server";
 import { UserCreate, UserEdit, UserList } from "./users";
 import { PostCreate, PostEdit, PostList } from "./posts";
 import { Dashboard } from "./dashboard";
+//import LoginPage from "./Login";
 //import authProvider from './authProvider';
 //import simpleRestProvider from 'ra-data-simple-rest';
 
